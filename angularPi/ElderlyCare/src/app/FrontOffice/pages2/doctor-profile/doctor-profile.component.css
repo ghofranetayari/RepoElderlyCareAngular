@@ -1,0 +1,52 @@
+/* doctor-profile.component.css */
+
+.doctor-profile {
+    max-width: 500px;
+    margin: 80px auto 20px; /* Adjust the top margin as needed */
+    padding: 30px; /* Increase padding for a longer card */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  .invisible-block {
+    height: 50px; /* Adjust the height based on your navbar's height */
+    width: 100%;
+  }
+  .custom-img-size {
+    width:1500px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+  }
+  .custom-img-size2 {
+    width:450px; /* Adjust the width as needed */
+    height: 450px; /* Adjust the height as needed */
+  }

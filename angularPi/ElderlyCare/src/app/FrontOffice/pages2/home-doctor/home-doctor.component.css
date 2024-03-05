@@ -1,0 +1,72 @@
+.doctor-sidebar {
+    background-color: #7ca7d3;
+    color: #ecf0f1;
+    padding: 20px;
+    width: 400px;
+    height: 100vh;
+  }
+  
+  .align-center {
+    display: flex;
+    align-items: center;
+  }
+  
+  .image {
+    margin-right: 10px;
+  }
+  
+  .nameContent {
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  .sidebar-item {
+    margin-top: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .item-image {
+    width: 24px;
+    height: 24px;
+    background-color: #3498db;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .text {
+    margin-left: 20px;
+  }
+  
+  /* Style for each specific item */
+  .patients-image {
+    background-color: #e74c3c;
+  }
+  
+  .schedule-image {
+    background-color: #2ecc71;
+  }
+  .profile-picture {
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    border-radius: 50%; /* Creates a round shape */
+    object-fit: cover; /* Ensures the image is fully covered */
+  }
+  .col-md-3 {
+    padding-left: 50; /* Remove right padding */
+  }
+
+  .col-md-9 {
+    padding-right: 50; /* Remove left padding */
+  }
+  h2 {
+    color: #3498db; /* Set the color as needed */
+    text-align: center;
+    border-bottom: 2px solid #3498db; /* Add an underline effect */
+    padding-bottom: 10px; /* Adjust as needed */
+    margin-top: 0; /* Remove default margin */
+  }
+  

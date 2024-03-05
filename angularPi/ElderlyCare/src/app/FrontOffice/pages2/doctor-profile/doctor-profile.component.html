@@ -1,0 +1,36 @@
+<!-- doctor-profile.component.html -->
+<div class="invisible-block"></div>
+
+<div *ngIf="doctor" class="container mt-5">
+  <div class="row align-items-stretch">
+    <!-- Doctor Profile -->
+    <div class="col-lg-6">
+      <div class="card doctor-profile-card h-100">
+        <img [src]="doctor.schedule" class="card-img-top doctor-profile-img custom-img-size2" alt="{{ doctor.username }} Image">
+        <div class="card-body">
+          <h1>{{ doctor.name }}</h1>
+          <p>Specialty: {{ doctor.specialization }}</p>
+          <p>{{ doctor.username }}</p>
+          <p>Phone Number: {{ doctor.phoneNumber }}</p>
+          <!-- Additional details as needed -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Summary -->
+    <div class="col-lg-6 d-flex flex-column h-100 justify-content-between"> <!-- Changed to flex-column, added height, and justify-content-between -->
+      <div class="card"> <!-- Removed fixed height -->
+        <div class="card-body text-center"> <!-- Added text-center class -->
+          <img src="/assets/assetDoctor/img/booking.png" alt="Image" class="img-fluid custom-img-size"> <!-- Added custom-img-size class -->
+        </div>
+     
+      <div class="text-center mt-3"> <!-- Added margin-top and text-center -->
+        <div class="invisible-block"></div>
+
+        <p>Feel free to fill out an appointment request at a time that suits you best!</p>
+
+        <button class="btn btn-primary" (click)="navigateToDoctorCalendar()">View Calendar</button>
+      </div> </div>
+    </div>
+  </div>
+</div>

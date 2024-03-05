@@ -1,0 +1,56 @@
+<!-- elderly-dashboard.component.html -->
+
+<!-- Navbar with invisible block -->
+<div class="invisible-block"></div> <!-- Add this line -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Navbar content -->
+</nav>
+
+<div class="background-container">
+  <div class="search-container text-center">
+    <h1 class="mb-4">Find A Specialist</h1>
+
+    <!-- Improved Search Row -->
+    <div class="row mb-4">
+      <div class="col-md-6 mx-auto">
+        <div class="input-group">
+          <input type="text" placeholder="Search Doctors by Specialty" [(ngModel)]="searchSpecialty" (input)="searchDoctors()"class="form-control">
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button" (click)="searchDoctors()">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <!-- Doctors List displayed in 3x3 grid -->
+    <div *ngFor="let doctor of doctors" class="col-lg-4 mb-4">
+      <div class="card doctor-card">
+        <!-- Card Content -->
+        <img [src]="doctor.schedule" class="card-img-top" alt="{{ doctor.username }} Image">
+        <div class="card-body">
+          <h4 class="card-title">{{ doctor.username }}</h4>
+          <p class="card-text">Speciality: {{ doctor.specialization }}</p>
+          <p class="card-text">Phone Number: {{ doctor.phoneNumber }}</p>
+          <div class="social">
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+          </div>
+          <button class="btn btn-primary" (click)="navigateToDoctorProfile(doctor.idDoctor)">View Profile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ... rest of your code ... -->
+
+<!-- ... rest of your code ... -->
+
+<link href="/assets/assetDoctor/css/style.css" rel="stylesheet">
+<script src="/assets/assetDoctor/js/aos.js"></script>

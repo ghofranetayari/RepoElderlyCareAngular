@@ -1,0 +1,81 @@
+<div class="row">
+    <!-- Sidebar -->
+    <div class="col-md-3">
+      <div class="doctor-sidebar">
+        <div class="info align-center" *ngIf="doctorProfile">
+          <div class="image"><img [src]="doctorProfile.schedule" class="profile-picture" /></div>
+          <div class="content nameContent">
+            <p class='name' style="margin-top: 16px; font-size: 18px; font-weight: bold;">{{ doctorProfile.username }}</p>
+            <p class='user-type' style="font-size: 14px;">Doctor</p>
+          </div>
+        </div>
+  
+        <!-- Patients Sidebar Item -->
+        <div class="sidebar-item patients">
+          <span class="patients-image"><i class="bi bi-person"></i></span>
+          <span class="text" title="patients" style="font-size: 20px;">Patients</span>
+        </div>
+  
+        <!-- Schedule Sidebar Item -->
+        <div class="sidebar-item schedule" (click)="onScheduleClick()">
+          <span class="schedule-image"><i class="bi bi-calendar"></i></span>
+          <span class="text" title="schedule" style="font-size: 20px;">Schedule</span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Table -->
+    <div class="col-md-9 mt-8" style="margin-top: 150px; display: flex; flex-direction: column; align-items: center;">
+        <h2 style="margin-bottom: 20px;">Patient List</h2>
+
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th>Username</th>
+              <th>Phone Number</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Date of Birth</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let patient of patients">
+              <td>{{ patient.username }}</td>
+              <td>{{ patient.phoneNumber }}</td>
+              <td>{{ patient.firstName }}</td>
+              <td>{{ patient.lastName }}</td>
+              <td>{{ patient.email }}</td>
+              <td>{{ patient.dateOfBirth | date }}</td>
+              <td>{{ patient.address }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Your existing styles for .doctor-sidebar */
+ 
+
+  /* Increase font size for name and user-type */
+  .name {
+    font-size: 50px; /* Adjust the font size as needed */
+  }
+
+  .user-type {
+    font-size: 25px; /* Adjust the font size as needed */
+  }
+
+
+
+  .sidebar-item:hover {
+    background-color: #5b8cc4; /* Change color on hover */
+  }
+    
+  
+    /* Additional styles to reduce space between sidebar and table */
+   
+  </style>

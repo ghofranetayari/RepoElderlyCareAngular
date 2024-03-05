@@ -1,0 +1,31 @@
+<!-- appointment-form.component.html -->
+<h2 mat-dialog-title>Appointment Form</h2>
+<form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">  <div class="form-group">
+    <label for="patientName">Patient Name:</label>
+    <input type="text" id="patientName" formControlName="patientName" class="form-control" >
+  </div>
+
+  <div class="form-group">
+    <label for="appFrom">From:</label>
+    <input type="text" id="appFrom" formControlName="appFrom" class="form-control" >
+  </div>
+
+  <div class="form-group">
+    <label for="appTo">To:</label>
+    <input type="text" id="appTo" formControlName="appTo" class="form-control" >
+  </div>
+
+  <div class="form-group">
+    <label for="appFirst">First Time Patient:</label>
+    <input type="checkbox" id="appFirst" formControlName="appFirst" class="form-check-input">
+  </div>
+
+  <div class="form-group">
+    <label for="symptom">Symptom:</label>
+    <textarea id="symptom" formControlName="symptom" class="form-control"></textarea>
+  </div>
+
+
+  <!-- Only call the saveAppointment method on button click -->
+  <button type="submit" mat-raised-button color="primary">Submit</button>
+</form>
